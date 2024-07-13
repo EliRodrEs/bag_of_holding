@@ -1,16 +1,15 @@
+from django.contrib.auth.models import User
 from django.db import models
 
-from bag_of_holding.inventory.constants import RARITY
-from bag_of_holding.user.models import User
+from .constants import RARITY
 
 
-# Create your models here.
 class BaseItem(models.Model):
     name = models.CharField(max_length=200)
     creation_date = models.DateTimeField("Date created")
-    acquisition_date = models.CharField("Date acquired")
+    acquisition_date = models.CharField("Date acquired", max_length=200)
     notes = models.TextField()
-    rarity = models.CharField(choices=RARITY)
+    rarity = models.CharField(choices=RARITY, max_length=200)
     price = models.JSONField()
     party_owned = models.BooleanField(default=False)
     available = models.BooleanField(default=True)
