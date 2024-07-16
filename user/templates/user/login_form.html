@@ -1,8 +1,13 @@
+<form action="{% url 'login' %}" method="post" class="w-full p-4 grid items-center">
+    {% csrf_token %}
 
-<form action="login" class="grid ">
-    <input type="text" name="username" id="input-user">
-    <label for="input-user">Username</label>
+    {% include '_base_input.html' with id="input-username" required="true" name="username" label="Usuario" %}
+    {% include '_base_input.html' with id="input-password" required="true" name="password" type="password" label="Password" %}
 
-    <input type="password" name="username" id="input-pass">
-    <label for="input-pass">Password</label>
+    {% if error_message%}
+        <p class="text-[var(--neutral-da] mx-8"><span class="text-[var(--secondary)]">* </span>{{error_message}}</p>
+    {% endif %}
+    <div class="btn-holder flex justify-end mx-8 my-4">
+        {% include '_base_button.html' with id="btn-login" text='Roll for initiative!' type='submit' %}
+    </div>
 </form>

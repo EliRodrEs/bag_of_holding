@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --main: #7895a0;
+    --secondary: #ff834f;
+    --neutral-li: #f8f7e5;
+    --neutral-da: #1d1d1d;
+
+    --pal-blue: #7895a0;
+    --pal-orange: #ff834f;
+    --pal-green-da: #5e7466;
+    --pal-pink: #d397b1;
+    --pal-red: #b47172;
+    --pal-green-bri: #7ecf86;
+    --pal-green-li: #87947d;
+    --pal-yellow: #f9Af42;
+}

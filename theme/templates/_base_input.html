@@ -1,0 +1,13 @@
+
+
+
+<div class="w-full max-w-xs md:max-w-md p-5 font-mono grid justify-self-center">
+  <label class="text-[var(--neutral-da)] text-md font-bold mb-2" for="input-{{id}}">{{ label }}</label>
+  <input
+    class="text-sm custom-input w-full py-2 border border-[var(--pal-orange)] rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-[var(--pal-orange)] hover:shadow-lg hover:border-[var(--pal-orange)] bg-text-[var(--neutral-da)]"
+    placeholder="{{placeholder}}"
+    type="{{type|default:'text'}}"
+    id="input-{{id}}"
+    name="{{name}}"
+  />
+</div>
