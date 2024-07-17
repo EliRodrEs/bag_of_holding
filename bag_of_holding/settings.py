@@ -116,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
@@ -145,8 +145,11 @@ NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
 # Rosetta
 LANGUAGES = [
-    ("en", _("English")),
     ("es", _("Spanish"))
 ]
 
 ROSETTA_SHOW_AT_ADMIN_PANEL = True
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]

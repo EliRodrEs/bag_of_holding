@@ -1,13 +1,19 @@
+{% load i18n %}
+
 <form action="{% url 'login' %}" method="post" class="w-full p-4 grid items-center">
     {% csrf_token %}
 
-    {% include '_base_input.html' with id="input-username" required="true" name="username" label="Usuario" %}
-    {% include '_base_input.html' with id="input-password" required="true" name="password" type="password" label="Password" %}
+    {% trans "User" as user_label %}
+    {% trans "Password" as password_label %}
+
+    {% include '_base_input.html' with id="input-username" required="true" name="username" label=user_label %}
+    {% include '_base_input.html' with id="input-password" required="true" name="password" type="password" label=password_label %}
 
     {% if error_message%}
         <p class="text-[var(--neutral-da] mx-8"><span class="text-[var(--secondary)]">* </span>{{error_message}}</p>
     {% endif %}
     <div class="btn-holder flex justify-end mx-8 my-4">
-        {% include '_base_button.html' with id="btn-login" text='Roll for initiative!' type='submit' %}
+        {% trans 'Roll for initiative!' as roll_label %}
+        {% include '_base_button.html' with id="btn-login" text=roll_label type='submit' %}
     </div>
 </form>

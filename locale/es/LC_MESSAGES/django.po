@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-17 17:30+0200\n"
-"PO-Revision-Date: 2024-07-17 17:31+0000\n"
+"POT-Creation-Date: 2024-07-17 17:41+0200\n"
+"PO-Revision-Date: 2024-07-17 17:43+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,10 +19,22 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\bag_of_holding\settings.py:147
+#: .\bag_of_holding\settings.py:148
 msgid "English"
 msgstr "Inglés"
 
-#: .\bag_of_holding\settings.py:148
+#: .\bag_of_holding\settings.py:149
 msgid "Spanish"
 msgstr "Español"
+
+#: .\user\templates\user\login_form.html:6
+msgid "User"
+msgstr "Usuario"
+
+#: .\user\templates\user\login_form.html:7
+msgid "Password"
+msgstr "Contraseña"
+
+#: .\user\templates\user\login_form.html:16
+msgid "Roll for initiative!"
+msgstr "¡Tira iniciativa!"
