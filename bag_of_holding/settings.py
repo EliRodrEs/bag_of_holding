@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'inventory.apps.InventoryConfig',
     'user.apps.UserConfig',
-    'rosetta'
+    'rosetta',
+    'fontawesomefree'
 ]
 
 MIDDLEWARE = [

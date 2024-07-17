@@ -1,23 +1,26 @@
-{% load static tailwind_tags %}
+{% extends '_base.html' %}
+{% load static %}
+{% load i18n %}
 
-<html>
-<head>
-    <title>Django Tailwind</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        {% tailwind_css %}
-</head>
 
-<body class="bg-gray-50 leading-normal tracking-normal text-red-500">
-    <h1 class="cursor-pointer text-red-500">HELLOW, IVASTEIN!</h1>
-
-    <ul>
-        {% for item in object_list %}
-            <li>{{item.name}}</li>
-        {% empty%}
-            <p>Aún no hay objetos</p>
-        {% endfor%}
-    </ul>
-</body>
-</html>
+{% block content %}
+    <body class="bg-[var(--main)] leading-normal tracking-normal text-[var(--neutral-da)]">
+    {% include 'header.html' %}
+    <main class="flex items-center justify-center align-center p-8 m-8">
+        <table id="items-table">
+            <thead>
+                <th>{% trans 'Item' %}</th>
+                <th>{% trans 'Rarity' %}</th>
+            </thead>
+            <tbody>
+            {% for item in object_list %}
+            <tr>
+                <td>{{item.name}}</td>
+                <td>{{item.rarity}}</td>
+            </tr>
+            {% endfor%}
+            </tbody>
+        </table>
+    </main>
+    </body>
+{% endblock %}
