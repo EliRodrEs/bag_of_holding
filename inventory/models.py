@@ -2,7 +2,7 @@ from typing import Optional
 
 from django.db import models
 from django.contrib.auth.models import User
-from bag_of_holding.inventory.constants import RARITY_CHOICES, WEAPON_TYPE_CHOICES, ARMOR_TYPE_CHOICES, RECHARGE_TYPES
+from .constants import RARITY_CHOICES, WEAPON_TYPE_CHOICES, ARMOR_TYPE_CHOICES, RECHARGE_TYPES
 from django.utils.translation import gettext_lazy as _
 
 
@@ -16,14 +16,11 @@ class BaseItem(models.Model):
     available: bool = models.BooleanField(default=True)
     owner: User = models.ForeignKey(User, on_delete=models.CASCADE)
     rarity: str = models.CharField(choices=RARITY_CHOICES, max_length=200, default='common')
-    description: Optional[str] = models.TextField()
+    description: Optional[str] = models.TextField(default="")
     attunement_required: bool = models.BooleanField(default=False)
 
     def __str__(self) -> str:
         return f'{self.name}'
-
-    class Meta:
-        abstract = True
 
 
 class RechargeableItem(models.Model):
