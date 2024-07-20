@@ -8,28 +8,109 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-17 19:26+0200\n"
-"PO-Revision-Date: 2024-07-20 11:52+0000\n"
+"POT-Creation-Date: 2024-07-20 17:46+0200\n"
+"PO-Revision-Date: 2024-07-20 11:56+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
 #: .\bag_of_holding\settings.py:149
 msgid "Spanish"
 msgstr "Español"
 
-#: .\inventory\templates\inventory\index.html:12
-msgid "Item"
-msgstr "Objeto"
+#: .\inventory\constants.py:4
+msgid "Common"
+msgstr ""
 
-#: .\inventory\templates\inventory\index.html:13
-msgid "Rarity"
-msgstr "Rareza"
+#: .\inventory\constants.py:5
+msgid "Uncommon"
+msgstr ""
+
+#: .\inventory\constants.py:6
+msgid "Rare"
+msgstr ""
+
+#: .\inventory\constants.py:7
+msgid "Very Rare"
+msgstr ""
+
+#: .\inventory\constants.py:8
+msgid "Legendary"
+msgstr ""
+
+#: .\inventory\constants.py:12
+msgid "Melee"
+msgstr ""
+
+#: .\inventory\constants.py:13
+msgid "Ranged"
+msgstr ""
+
+#: .\inventory\constants.py:17
+msgid "Light"
+msgstr ""
+
+#: .\inventory\constants.py:18
+msgid "Medium"
+msgstr ""
+
+#: .\inventory\constants.py:19
+msgid "Heavy"
+msgstr ""
+
+#: .\inventory\constants.py:20
+msgid "Shield"
+msgstr ""
+
+#: .\inventory\constants.py:24
+msgid "dawn"
+msgstr ""
+
+#: .\inventory\constants.py:25
+msgid "long rest"
+msgstr ""
+
+#: .\inventory\constants.py:26
+msgid "short rest"
+msgstr ""
+
+#: .\inventory\constants.py:27
+msgid "dusk"
+msgstr ""
+
+#: .\inventory\constants.py:28
+msgid "other"
+msgstr ""
+
+#: .\inventory\models.py:11
+msgid "Date created"
+msgstr ""
+
+#: .\inventory\models.py:12
+msgid "Date acquired"
+msgstr ""
+
+#: .\inventory\models.py:28
+msgid "Remaining charges"
+msgstr ""
+
+#: .\inventory\models.py:30
+msgid "Maximum charges"
+msgstr ""
+
+#: .\inventory\templates\inventory\index.html:12
+msgid "Search"
+msgstr ""
+
+#: .\inventory\templates\inventory\index.html:17
+msgid "Search for items"
+msgstr ""
 
 #: .\user\templates\user\login_form.html:6
 msgid "User"
@@ -42,6 +123,12 @@ msgstr "Contraseña"
 #: .\user\templates\user\login_form.html:16
 msgid "Roll for initiative!"
 msgstr "¡Tira iniciativa!"
+
+#~ msgid "Item"
+#~ msgstr "Objeto"
+
+#~ msgid "Rarity"
+#~ msgstr "Rareza"
 
 #~ msgid "English"
 #~ msgstr "Inglés"
