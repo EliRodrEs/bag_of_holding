@@ -35,13 +35,15 @@
                             <label for="hs-table-pagination-checkbox-all" class="sr-only">Checkbox</label>
                           </div>
                         </th>
-                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
-                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Age</th>
-                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Address</th>
-                        <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Action</th>
+                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Name' %}</th>
+                          <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">{% trans 'Rarity' %}</th>
+                          <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Price' %}</th>
+                          <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Description' %}</th>
+                          <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Acquisition date' %}</th>
                       </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-200">
+                    {% for item in object_list %}
                       <tr class="hover:bg-gray-100">
                         <td class="py-3 ps-4">
                           <div class="flex items-center h-5">
@@ -50,15 +52,14 @@
                             <label for="hs-table-pagination-checkbox-1" class="sr-only">Checkbox</label>
                           </div>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">John Brown</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">45</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">New York No. 1 Lake Park</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-                          <button type="button" class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border
-                          border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
-                        </td>
-                      </tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{{item.name|default:"??"}}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ item.rarity|default:"-" }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ item.price|default:"a lot" }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ item.description|default:"No data" }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ item.acquisition_date|default:"Anaenis" }}</td>
 
+                      </tr>
+                    {% endfor %}
                     </tbody>
                   </table>
                 </div>
