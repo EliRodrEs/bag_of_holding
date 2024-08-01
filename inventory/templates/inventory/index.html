@@ -2,67 +2,80 @@
 {% load static %}
 {% load i18n %}
 
-
 {% block content %}
-    <body class="bg-[var(--main)] leading-normal tracking-normal text-[var(--neutral-da)]">
+<body class="bg-[var(--main)] leading-normal tracking-normal text-[var(--neutral-da)]">
     {% include 'header.html' %}
-        <main class="grid align-center p-8 m-8 gap-4">
-                <div class="py-3 px-4 justify-self-end min-w-2xl">
-                  <div class="flex gap-4 w-full">
-                    <label class="sr-only">{% trans 'Search' %}</label>
-                    <div class="flex gap-4 w-96">
-                        <input type="text" name="hs-table-with-pagination-search" id="hs-table-with-pagination-search"
-                               class="py-2 px-3 ps-9 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:z-10
-                               focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                               placeholder="{% trans 'Search for items' %}">
-                        <div class="flex items-center pointer-events-none bg-[var(--secondary)] p-4 rounded">
-                          <svg class="size-4 text-[var(--neutral-da)]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <main class="grid align-center p-8 m-8 gap-4">
+        <div class="py-3 px-4 justify-self-end min-w-2xl">
+            <div class="flex gap-4 w-full">
+                <label class="sr-only">{% trans 'Search' %}</label>
+                <div class="flex gap-4 w-96">
+                    <input type="text" name="hs-table-with-pagination-search" id="hs-table-with-pagination-search"
+                           class="py-2 px-3 ps-9 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:z-10
+                           focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                           placeholder="{% trans 'Search for items' %}">
+                    <div class="flex items-center pointer-events-none bg-[var(--secondary)] p-4 rounded">
+                        <svg class="size-4 text-[var(--neutral-da)]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="11" cy="11" r="8"></circle>
                             <path d="m21 21-4.3-4.3"></path>
-                          </svg>
-                        </div>
+                        </svg>
                     </div>
-                  </div>
                 </div>
-                <div class="overflow-hidden">
-                  <table class="min-w-full divide-y divide-gray-200">
-                    <thead class="bg-gray-50">
-                      <tr>
+            </div>
+        </div>
+        <div class="overflow-hidden">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
                         <th scope="col" class="py-3 px-4 pe-0">
-                          <div class="flex items-center h-5">
-                            <input id="hs-table-pagination-checkbox-all" type="checkbox" class="border-gray-200 rounded
-                            text-blue-600 focus:ring-blue-500">
-                            <label for="hs-table-pagination-checkbox-all" class="sr-only">Checkbox</label>
-                          </div>
+                            <div class="flex items-center h-5">
+                                <input id="hs-table-pagination-checkbox-all" type="checkbox" class="border-gray-200 rounded
+                                text-blue-600 focus:ring-blue-500">
+                                <label for="hs-table-pagination-checkbox-all" class="sr-only">Checkbox</label>
+                            </div>
                         </th>
                         <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Name' %}</th>
-                          <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">{% trans 'Rarity' %}</th>
-                          <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Price' %}</th>
-                          <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Description' %}</th>
-                          <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Acquisition date' %}</th>
-                      </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-200">
-                    {% for item in object_list %}
-                      <tr class="hover:bg-gray-100">
+                        <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">{% trans 'Rarity' %}</th>
+                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Price' %}</th>
+                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Description' %}</th>
+                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Acquisition date' %}</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                {% for item in object_list %}
+                    <tr class="hover:bg-gray-100 cursor-pointer" onclick="toggleDetails(this)">
                         <td class="py-3 ps-4">
-                          <div class="flex items-center h-5">
-                            <input id="hs-table-pagination-checkbox-1" type="checkbox" class="border-gray-200 rounded
-                            text-blue-600 focus:ring-blue-500">
-                            <label for="hs-table-pagination-checkbox-1" class="sr-only">Checkbox</label>
-                          </div>
+                            <div class="flex items-center h-5">
+                                <input id="hs-table-pagination-checkbox-1" type="checkbox" class="border-gray-200 rounded
+                                text-blue-600 focus:ring-blue-500">
+                                <label for="hs-table-pagination-checkbox-1" class="sr-only">Checkbox</label>
+                            </div>
                         </td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{{item.name|default:"??"}}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{{ item.name|default:"??" }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ item.rarity|default:"-" }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ item.price|default:"a lot" }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ item.description|default:"No data" }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ item.acquisition_date|default:"Anaenis" }}</td>
+                    </tr>
+                    <tr class="details-row hidden">
+                        <td colspan="6" class="px-6 py-4">
+                            <!-- Additional details can be added here -->
+                            <p>Additional details for {{ item.name }}</p>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
 
-                      </tr>
-                    {% endfor %}
-                    </tbody>
-                  </table>
-                </div>
-        </main>
-    </body>
+    <script>
+        function toggleDetails(row) {
+            let nextRow = row.nextElementSibling;
+            if (nextRow && nextRow.classList.contains('details-row')) {
+                nextRow.classList.toggle('hidden');
+            }
+        }
+    </script>
+</body>
 {% endblock %}

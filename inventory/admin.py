@@ -1,5 +1,27 @@
 from django.contrib import admin
+from .models import (
+    BaseItem,
+    Weapon,
+    Armor,
+    Potion,
+    Scroll,
+    WondrousItem,
+    Wand,
+    Staff,
+    Rod
+)
 
-from .models import BaseItem
+models = [
+    BaseItem,
+    Weapon,
+    Armor,
+    Potion,
+    Scroll,
+    WondrousItem,
+    Wand,
+    Staff,
+    Rod
+]
 
-admin.site.register(BaseItem)
+for model in models:
+    admin.site.register(model)
