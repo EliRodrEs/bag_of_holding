@@ -5,8 +5,8 @@
 {% block content %}
 <body class="bg-[var(--main)] leading-normal tracking-normal text-[var(--neutral-da)]">
     {% include 'header.html' %}
-    <main class="grid align-center p-8 m-8 gap-4">
-        <div class="py-3 px-4 justify-self-end min-w-2xl">
+    <main class="grid align-center p-8 m-8">
+        <div class="py-3 justify-self-end min-w-2xl">
             <div class="flex gap-4 w-full">
                 <label class="sr-only">{% trans 'Search' %}</label>
                 <div class="flex gap-4 w-96">
@@ -23,22 +23,22 @@
                 </div>
             </div>
         </div>
-        <div class="overflow-hidden">
+        <div class="overflow-auto custom-scrollbar">
             <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-50">
+                <thead class="bg-[var(--secondary)]">
                     <tr>
                         <th scope="col" class="py-3 px-4 pe-0">
                             <div class="flex items-center h-5">
                                 <input id="hs-table-pagination-checkbox-all" type="checkbox" class="border-gray-200 rounded
-                                text-blue-600 focus:ring-blue-500">
+                                text-[var(--secondary)] focus:ring-[var(--secondary)]">
                                 <label for="hs-table-pagination-checkbox-all" class="sr-only">Checkbox</label>
                             </div>
                         </th>
-                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Name' %}</th>
-                        <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">{% trans 'Rarity' %}</th>
-                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Price' %}</th>
-                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Description' %}</th>
-                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">{% trans 'Acquisition date' %}</th>
+                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-[var(--neutral-da)] uppercase">{% trans 'Name' %}</th>
+                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-[var(--neutral-da)] uppercase">{% trans 'Rarity' %}</th>
+                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-[var(--neutral-da)] uppercase">{% trans 'Price' %}</th>
+                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-[var(--neutral-da)] uppercase">{% trans 'Description' %}</th>
+                        <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-[var(--neutral-da)] uppercase">{% trans 'Acquisition date' %}</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">
@@ -47,13 +47,34 @@
                         <td class="py-3 ps-4">
                             <div class="flex items-center h-5">
                                 <input id="hs-table-pagination-checkbox-1" type="checkbox" class="border-gray-200 rounded
-                                text-blue-600 focus:ring-blue-500">
+                                text-[var(--secondary)] focus:ring-[var(--secondary)]" onclick="event.stopPropagation()">
                                 <label for="hs-table-pagination-checkbox-1" class="sr-only">Checkbox</label>
                             </div>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{{ item.name|default:"??" }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ item.rarity|default:"-" }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ item.price|default:"a lot" }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                            <div class="price-holder flex gap-4">
+                                 <div class="gp-holder flex gap-2 items-center">
+                                     <div class="coin-holder w-[1rem]" >
+                                        <img src="{% static 'inventory/img/gp_nobg.svg' %}"  alt="gold coin">
+                                     </div>
+                                     {{item.price.gp|default:"-"}}
+                                 </div>
+                                <div class="gp-holder flex gap-2 items-center">
+                                     <div class="coin-holder w-[1rem]" >
+                                        <img src="{% static 'inventory/img/sp_nobg.svg' %}"  alt="silver coin">
+                                     </div>
+                                     {{item.price.sp|default:"-"}}
+                                 </div>
+                                <div class="gp-holder flex gap-2 items-center">
+                                     <div class="coin-holder w-[1rem]" >
+                                        <img src="{% static 'inventory/img/cp_nobg.svg' %}"  alt="copper coin">
+                                     </div>
+                                     {{item.price.cp|default:"-"}}
+                                 </div>
+                            </div>
+                        </td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ item.description|default:"No data" }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ item.acquisition_date|default:"Anaenis" }}</td>
                     </tr>

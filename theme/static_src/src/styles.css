@@ -16,4 +16,37 @@
     --pal-green-bri: #7ecf86;
     --pal-green-li: #87947d;
     --pal-yellow: #f9Af42;
+
 }
+
+@layer utilities {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+     /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--neutral-li);
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+  }
