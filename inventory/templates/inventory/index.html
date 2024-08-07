@@ -9,17 +9,14 @@
         <div class="py-3 justify-self-end min-w-2xl">
             <div class="flex gap-4 w-full">
                 <label class="sr-only">{% trans 'Search' %}</label>
-                <div class="flex gap-4 w-96">
+                <div class="flex gap-4 w-96 cursor-pointer">
                     <input type="text" name="hs-table-with-pagination-search" id="hs-table-with-pagination-search"
                            class="py-2 px-3 ps-9 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:z-10
                            focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                            placeholder="{% trans 'Search for items' %}">
-                    <div class="flex items-center pointer-events-none bg-[var(--secondary)] p-4 rounded">
-                        <svg class="size-4 text-[var(--neutral-da)]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.3-4.3"></path>
-                        </svg>
-                    </div>
+                    <button class="transition ease-in-out bg-[var(--secondary)] p-4 w-fit text-[(--neutral-da)]  hover:bg-[var(--neutral-li)] hover:-translate-y-1 duration-300 font-semibold rounded-lg" onclick="searchForItem()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -89,14 +86,7 @@
             </table>
         </div>
     </main>
-
-    <script>
-        function toggleDetails(row) {
-            let nextRow = row.nextElementSibling;
-            if (nextRow && nextRow.classList.contains('details-row')) {
-                nextRow.classList.toggle('hidden');
-            }
-        }
-    </script>
+    <script src="{% static 'inventory/js/inventory.js' %}"></script>
 </body>
 {% endblock %}
+

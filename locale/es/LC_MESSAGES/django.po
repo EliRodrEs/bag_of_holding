@@ -8,16 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-01 21:22+0200\n"
-"PO-Revision-Date: 2024-07-20 11:56+0000\n"
+"POT-Creation-Date: 2024-08-06 17:47+0200\n"
+"PO-Revision-Date: 2024-08-06 17:53+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
-"1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
 #: .\bag_of_holding\settings.py:149
@@ -26,91 +25,111 @@ msgstr "Español"
 
 #: .\inventory\constants.py:4
 msgid "Common"
-msgstr ""
+msgstr "Común"
 
 #: .\inventory\constants.py:5
 msgid "Uncommon"
-msgstr ""
+msgstr "No común"
 
 #: .\inventory\constants.py:6
 msgid "Rare"
-msgstr ""
+msgstr "Raro"
 
 #: .\inventory\constants.py:7
 msgid "Very Rare"
-msgstr ""
+msgstr "Muy raro"
 
 #: .\inventory\constants.py:8
 msgid "Legendary"
-msgstr ""
+msgstr "Legendario"
 
 #: .\inventory\constants.py:12
 msgid "Melee"
-msgstr ""
+msgstr "Melee"
 
 #: .\inventory\constants.py:13
 msgid "Ranged"
-msgstr ""
+msgstr "A distancia"
 
 #: .\inventory\constants.py:17
 msgid "Light"
-msgstr ""
+msgstr "Ligera"
 
 #: .\inventory\constants.py:18
 msgid "Medium"
-msgstr ""
+msgstr "Media"
 
 #: .\inventory\constants.py:19
 msgid "Heavy"
-msgstr ""
+msgstr "Pesada"
 
 #: .\inventory\constants.py:20
 msgid "Shield"
-msgstr ""
+msgstr "Escudo"
 
 #: .\inventory\constants.py:24
 msgid "dawn"
-msgstr ""
+msgstr "amanecer"
 
 #: .\inventory\constants.py:25
 msgid "long rest"
-msgstr ""
+msgstr "descanso Largo"
 
 #: .\inventory\constants.py:26
 msgid "short rest"
-msgstr ""
+msgstr "descanso corto"
 
 #: .\inventory\constants.py:27
 msgid "dusk"
-msgstr ""
+msgstr "anochecer"
 
 #: .\inventory\constants.py:28
 msgid "other"
-msgstr ""
+msgstr "otro"
 
 #: .\inventory\models.py:11
 msgid "Date created"
-msgstr ""
+msgstr "Fecha creación"
 
 #: .\inventory\models.py:12
 msgid "Date acquired"
-msgstr ""
+msgstr "Fecha adquisición"
 
 #: .\inventory\models.py:28
 msgid "Remaining charges"
-msgstr ""
+msgstr "Cargas restantes"
 
 #: .\inventory\models.py:30
 msgid "Maximum charges"
-msgstr ""
+msgstr "Cargas máximas"
 
-#: .\inventory\templates\inventory\index.html:12
+#: .\inventory\templates\inventory\index.html:11
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
-#: .\inventory\templates\inventory\index.html:17
+#: .\inventory\templates\inventory\index.html:16
 msgid "Search for items"
-msgstr ""
+msgstr "Buscar objetos"
+
+#: .\inventory\templates\inventory\index.html:37
+msgid "Name"
+msgstr "Nombre"
+
+#: .\inventory\templates\inventory\index.html:38
+msgid "Rarity"
+msgstr "Rareza"
+
+#: .\inventory\templates\inventory\index.html:39
+msgid "Price"
+msgstr "Precio"
+
+#: .\inventory\templates\inventory\index.html:40
+msgid "Description"
+msgstr "Descripción"
+
+#: .\inventory\templates\inventory\index.html:41
+msgid "Acquisition date"
+msgstr "Fecha de adquisición"
 
 #: .\user\templates\user\login_form.html:6
 msgid "User"
@@ -470,8 +489,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:267
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
-"hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
+" hyphens."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:279
@@ -682,15 +701,15 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1550
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
-"uuuuuu]][TZ] format."
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ] format."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1558
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
-"[TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD "
+"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1563
@@ -709,8 +728,8 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1853
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
-"uuuuuu] format."
+"“%(value)s” value has an invalid format. It must be in [DD] "
+"[[HH:]MM:]ss[.uuuuuu] format."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1857
@@ -869,7 +888,8 @@ msgid "Many-to-many relationship"
 msgstr ""
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the label
+#. characters will prevent the default label_suffix to be appended to the
+#. label
 #: .\venv\Lib\site-packages\django\forms\boundfield.py:185
 msgid ":?.!"
 msgstr ""
@@ -919,7 +939,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:633
 #, python-format
-msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid ""
+"Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -1029,7 +1050,8 @@ msgid "The inline value did not match the parent instance."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1448
-msgid "Select a valid choice. That choice is not one of the available choices."
+msgid ""
+"Select a valid choice. That choice is not one of the available choices."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1587
@@ -1496,11 +1518,11 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:45
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
-"including the “Referrer-Policy: no-referrer” header, please remove them. The "
-"CSRF protection requires the “Referer” header to do strict referer checking. "
-"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
-"\" …> for links to third-party sites."
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
+" including the “Referrer-Policy: no-referrer” header, please remove them. "
+"The CSRF protection requires the “Referer” header to do strict referer "
+"checking. If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:54
@@ -1551,8 +1573,8 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:652
 #, python-format
 msgid ""
-"Future %(verbose_name_plural)s not available because %(class_name)s."
-"allow_future is False."
+"Future %(verbose_name_plural)s not available because "
+"%(class_name)s.allow_future is False."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:692
@@ -1610,10 +1632,10 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221
 #, python-format
 msgid ""
-"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
-"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
-"\">DEBUG=True</a> is in your settings file and you have not configured any "
-"URLs."
+"You are seeing this page because <a "
+"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
+"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
+"and you have not configured any URLs."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:229
@@ -1642,9 +1664,6 @@ msgstr ""
 
 #~ msgid "Item"
 #~ msgstr "Objeto"
-
-#~ msgid "Rarity"
-#~ msgstr "Rareza"
 
 #~ msgid "English"
 #~ msgstr "Inglés"

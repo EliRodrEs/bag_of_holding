@@ -8,4 +8,5 @@ from .models import BaseItem
 
 class IndexView(generic.ListView):
 	template_name = "inventory/index.html"
+	paginate_by = 20
 	model = BaseItem
