@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-22 22:02+0200\n"
+"PO-Revision-Date: 2024-08-22 22:07+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\bag_of_holding\settings.py:150
+msgid "Spanish"
+msgstr "Español"
+
+#: .\inventory\constants.py:4
+msgid "Common"
+msgstr "Común"
+
+#: .\inventory\constants.py:5
+msgid "Uncommon"
+msgstr "No común"
+
+#: .\inventory\constants.py:6
+msgid "Rare"
+msgstr "Raro"
+
+#: .\inventory\constants.py:7
+msgid "Very Rare"
+msgstr "Muy raro"
+
+#: .\inventory\constants.py:8
+msgid "Legendary"
+msgstr "Legendario"
+
+#: .\inventory\constants.py:12
+msgid "Melee"
+msgstr "Melee"
+
+#: .\inventory\constants.py:13
+msgid "Ranged"
+msgstr "A distancia"
+
+#: .\inventory\constants.py:17
+msgid "Light"
+msgstr "Ligera"
+
+#: .\inventory\constants.py:18
+msgid "Medium"
+msgstr "Media"
+
+#: .\inventory\constants.py:19
+msgid "Heavy"
+msgstr "Pesada"
+
+#: .\inventory\constants.py:20
+msgid "Shield"
+msgstr "Escudo"
+
+#: .\inventory\constants.py:24
+msgid "dawn"
+msgstr "amanecer"
+
+#: .\inventory\constants.py:25
+msgid "long rest"
+msgstr "descanso largo"
+
+#: .\inventory\constants.py:26
+msgid "short rest"
+msgstr "descanso corto"
+
+#: .\inventory\constants.py:27
+msgid "dusk"
+msgstr "anochecer"
+
+#: .\inventory\constants.py:28
+msgid "other"
+msgstr "otro"
+
+#: .\inventory\models.py:22
+msgid "Date created"
+msgstr "Fecha de creación"
+
+#: .\inventory\models.py:23
+msgid "Date acquired"
+msgstr "Fecha de adquisición"
+
+#: .\inventory\models.py:39
+msgid "Remaining charges"
+msgstr "Cargas restantes"
+
+#: .\inventory\models.py:40
+msgid "Maximum charges"
+msgstr "Cargas máximas"
+
+#: .\inventory\templates\inventory\index.html:11
+msgid "Search"
+msgstr "Buscar"
+
+#: .\inventory\templates\inventory\index.html:16
+msgid "Search for items"
+msgstr "Buscar objetos"
+
+#: .\inventory\templates\inventory\index.html:34
+msgid "Name"
+msgstr "Nombre"
+
+#: .\inventory\templates\inventory\index.html:35
+msgid "Rarity"
+msgstr "Rareza"
+
+#: .\inventory\templates\inventory\index.html:36
+msgid "Price"
+msgstr "Precio"
+
+#: .\inventory\templates\inventory\index.html:37
+msgid "Description"
+msgstr "Descripción"
+
+#: .\inventory\templates\inventory\index.html:38
+msgid "Acquisition date"
+msgstr "Fecha de adquisición"
+
+#: .\inventory\templates\inventory\index.html:88
+msgid "Ups, looks like your party is broke!"
+msgstr "¡Vaya, parece que tu party no tiene ni un duro!"
+
+#: .\user\templates\user\login_form.html:6
+msgid "User"
+msgstr "Usuario"
+
+#: .\user\templates\user\login_form.html:7
+msgid "Password"
+msgstr "Contraseña"
+
+#: .\user\templates\user\login_form.html:16
+msgid "Roll for initiative!"
+msgstr "¡Tira iniciativa!"
+
+#, fuzzy
+#~ msgid "Commands"
+#~ msgstr "Común"
+
+#, fuzzy
+#~ msgid "required"
+#~ msgstr "Fecha de adquisición"
+
+#, fuzzy
+#~ msgid "and"
+#~ msgstr "A distancia"
+
+#, fuzzy
+#~ msgid "Duration"
+#~ msgstr "Descripción"
+
+#, fuzzy
+#~ msgid "Change"
+#~ msgstr "A distancia"
+
+#, fuzzy
+#~ msgid "midnight"
+#~ msgstr "Ligera"
+
+#, fuzzy
+#~ msgid "March"
+#~ msgstr "Buscar"
+
+#, fuzzy
+#~ msgctxt "abbrev. month"
+#~ msgid "March"
+#~ msgstr "Buscar"
+
+#, fuzzy
+#~ msgctxt "alt. month"
+#~ msgid "March"
+#~ msgstr "Buscar"
